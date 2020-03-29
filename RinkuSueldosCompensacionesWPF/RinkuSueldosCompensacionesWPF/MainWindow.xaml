@@ -1,0 +1,29 @@
+﻿<Window x:Class="RinkuSueldosCompensacionesWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RinkuSueldosCompensacionesWPF"
+        xmlns:views = "clr-namespace:RinkuSueldosCompensacionesWPF.Views"
+        mc:Ignorable="d"
+        Title="Rinku" Height="500" Width="750">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem x:Name="Empleado" Header="Empleados" Click="Empleado_Click"></MenuItem>
+            <MenuItem x:Name="CapMov" Header="Captura Movimientos" Click="CapMov_Click" ></MenuItem>
+            <MenuItem x:Name="Pagar" Header="PagoEmpleado" Click="Pagar_Click" ></MenuItem>
+            <!--<MenuItem x:Name="About" Header="?" Click="About_Click">
+                <MenuItem Header="Acerca de.." />
+                <Separator />
+                <MenuItem Header="Exit" />
+            </MenuItem>-->
+        </Menu>
+        <TextBox AcceptsReturn="True" />
+        <Grid>            
+            <views:EmpleadoView x:Name = "EmpleadViewControl"  Visibility="Visible"/>
+            <views:CapturaFolioView x:Name = "CapturaMovimientoViewControl"  Visibility="Hidden" />
+            <views:PagoEmpleadoView x:Name = "PagoEmpleadoViewControl" Visibility="Hidden"/>
+        </Grid>
+    </DockPanel>
+
+</Window>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RinkuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="RinkuSP" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="OBTENERPAGOEMPLEADO" ReturnType="Collection(RinkuModel.OBTENERPAGOEMPLEADO_Result)">
+      <Parameter Name="IdEmpleado" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="OBTENERPAGOEMPLEADO_Result">
+    <Property Type="Int32" Name="folio" Nullable="true" />
+    <Property Type="String" Name="nombres" Nullable="true" MaxLength="120" />
+    <Property Type="Int32" Name="sueldobase" Nullable="true" />
+    <Property Type="Int32" Name="bonotrabajo" Nullable="true" />
+    <Property Type="Int32" Name="entregas" Nullable="true" />
+    <Property Type="Int32" Name="vales" Nullable="true" />
+    <Property Type="Single" Name="total" Nullable="true" />
+    <Property Type="Single" Name="isr" Nullable="true" />
+    <Property Type="Single" Name="totalpagar" Nullable="true" />
+  </ComplexType>
+</Schema>

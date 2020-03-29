@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RinkuModelStoreContainer" CdmEntityContainer="RinkuSP">
+    <FunctionImportMapping FunctionImportName="OBTENERPAGOEMPLEADO" FunctionName="RinkuModel.Store.OBTENERPAGOEMPLEADO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RinkuModel.OBTENERPAGOEMPLEADO_Result">
+          <ScalarProperty Name="folio" ColumnName="folio" />
+          <ScalarProperty Name="nombres" ColumnName="nombres" />
+          <ScalarProperty Name="sueldobase" ColumnName="sueldobase" />
+          <ScalarProperty Name="bonotrabajo" ColumnName="bonotrabajo" />
+          <ScalarProperty Name="entregas" ColumnName="entregas" />
+          <ScalarProperty Name="vales" ColumnName="vales" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="isr" ColumnName="isr" />
+          <ScalarProperty Name="totalpagar" ColumnName="totalpagar" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
